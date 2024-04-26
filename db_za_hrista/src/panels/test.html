@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Print message</title>
+        <script type="text/javascript">
+            function dataField(f) {
+                //alert("Вы ввели: " + f.char.value);
+
+                //var iterator = prompt(('enter num', '1 or 2')); // ввод значения в диалоговом окне
+                var toWebBrowser = "";
+                var iterator = f.char.value; // значение итератору присваивается из формы
+                for(var i=1; i<=iterator; i++){
+                    toWebBrowser += i;
+                }
+                //Показываем значение JavaScript переменной в HTML теге
+                document.getElementById("myMessage").innerHTML = toWebBrowser; 
+            } 
+        </script>
+    </head>
+    <body>
+        <h2>Программа <b>на </b> JavaScript</h2>
+        <i id="myMessage">Текст выделен курсивом</i>  
+        <form>
+            <p><input type="number" name="char"></p>
+            <p><input type="button" value="ОК" onClick="dataField(this.form)"></p>
+        </form>
+
+    </body>
+</html>
+
+
