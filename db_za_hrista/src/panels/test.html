@@ -1,13 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" title="Страница get запроса к новомученикам">
     <head>
-        <meta charset="utf-8"/>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Print message</title>
         <script type="text/javascript">
             function dataField(f) {
-                //alert("Вы ввели: " + f.char.value);
-
-                //var iterator = prompt(('enter num', '1 or 2')); // ввод значения в диалоговом окне
+                //  асинхронный HTTP-запрос в JavaScript
+                fetch('http://students.yss.su/PSTGU/1_kurs_2023/kadilnikov_dmitry/baza_dannix/baza_dannyx_CORS.php')
+                    .then(response => response.text())
+                    .then(data => console.log(data))
+                    .catch(error => console.error(error));
+                    
                 var toWebBrowser = "";
                 var iterator = f.char.value; // значение итератору присваивается из формы
                 for(var i=1; i<=iterator; i++){
@@ -22,11 +26,8 @@
         <h2>Программа <b>на </b> JavaScript</h2>
         <i id="myMessage">Текст выделен курсивом</i>  
         <form>
-            <p><input type="number" name="char"></p>
+            <p><input type="number" name="char" placeholder="10"></p>
             <p><input type="button" value="ОК" onClick="dataField(this.form)"></p>
         </form>
-
     </body>
 </html>
-
-
