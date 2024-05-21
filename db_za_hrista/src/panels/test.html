@@ -4,13 +4,24 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Print message</title>
+        <style>
+            #myMessage {
+                height: 100vh;
+            }
+        </style>
         <script type="text/javascript">
+            function load_home() {
+                 document.getElementById("myMessage").innerHTML='<object type="text/html" data="home_page.html" width="100%" title="This object has text"></object>';
+            }
             function dataField(f) {
-                //  асинхронный HTTP-запрос в JavaScript
                 fetch('http://students.yss.su/PSTGU/1_kurs_2023/kadilnikov_dmitry/baza_dannix/baza_dannyx_CORS.php')
-                    .then(response => response.text())
-                    .then(data => console.log(data))
-                    .catch(error => console.error(error));
+                  .then(function (response) {
+                    return response.text();
+                  })
+                  .then(function (text) {
+                    console.log(text);
+                    load_home();
+                  });
                     
                 var toWebBrowser = "";
                 var iterator = f.char.value; // значение итератору присваивается из формы
@@ -18,16 +29,18 @@
                     toWebBrowser += i;
                 }
                 //Показываем значение JavaScript переменной в HTML теге
-                document.getElementById("myMessage").innerHTML = toWebBrowser; 
+                //document.getElementById("myMessage").innerHTML = toWebBrowser; 
             } 
+
         </script>
     </head>
     <body>
-        <h2>Программа <b>на </b> JavaScript</h2>
-        <i id="myMessage">Текст выделен курсивом</i>  
         <form>
-            <p><input type="number" name="char" placeholder="10"></p>
-            <p><input type="button" value="ОК" onClick="dataField(this.form)"></p>
+            <!--<p><input type="number" name="char" placeholder="10"></p>-->
+            <p><input type="button" value="Загрузить данные из базы данных" onClick="dataField(this.form)"></p>
         </form>
+        <iframe  height="800" width="100%" src="home_page.html">
+        </iframe> 
+        <div id="myMessage">Ожидается загрузка html</div>
     </body>
 </html>
