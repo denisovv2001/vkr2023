@@ -14,9 +14,9 @@
 - [Команда проекта](#команда-проекта)
 
 ### Технологии
-- [GatsbyJS](https://www.gatsbyjs.com/)
-- [TypeScript](https://www.typescriptlang.org/)
-- ...
+- [JavaScript](https://nodejs.org/en)
+- [HTML](https://htmlbook.ru/samhtml)
+- [CSS](https://htmlbook.ru/samcss)
 
 ### Использование
 Расскажите как установить и использовать ваш проект, покажите пример кода:
