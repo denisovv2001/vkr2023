@@ -19,6 +19,7 @@
         "@vkontakte/vk-bridge": "latest",
         "@vkontakte/vk-miniapps-deploy": "^0.0.25",
         "@vkontakte/vkui": "5.1.0",
+        "axios": "^1.6.8",
         "eruda": "^2.4.1",
         "eruda-code": "^2.0.0",
         "eruda-dom": "^2.0.0",
@@ -49,3 +50,4 @@
         "cross-env": "^7.0.3"
     }
 }
+

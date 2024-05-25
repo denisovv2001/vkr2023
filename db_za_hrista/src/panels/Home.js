@@ -51,7 +51,6 @@ class App extends React.Component {
 let test_l = new App();
 
 
-
 const Home = ({ id, go, fetchedUser}) => (
 	<Panel id={id}>
 		<PanelHeader>Example</PanelHeader>
