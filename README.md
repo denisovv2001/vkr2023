@@ -13,9 +13,9 @@
 - [To do](#to-do)
 
 ### Технологии
-- [GatsbyJS](https://www.gatsbyjs.com/)
-- [TypeScript](https://www.typescriptlang.org/)
-- ...
+- [JavaScript](https://nodejs.org/en)
+- [HTML](https://htmlbook.ru/samhtml)
+- [CSS](https://htmlbook.ru/samcss)
 
 ### Использование
 Установите пакет [create-vk-mini-app](https://dev.vk.com/ru/mini-apps/getting-started/create-vk-mini-app)
