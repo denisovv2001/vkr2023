@@ -10,17 +10,16 @@
             }
         </style>
         <script type="text/javascript">
-            function load_home() {
-                 document.getElementById("myMessage").innerHTML='<object type="text/html" data="home_page.html" width="100%" title="This object has text"></object>';
-            }
             function dataField(f) {
-                fetch('http://students.yss.su/PSTGU/1_kurs_2023/kadilnikov_dmitry/baza_dannix/baza_dannyx_CORS.php')
+                //http://students.yss.su/PSTGU/1_kurs_2023/kadilnikov_dmitry/baza_dannix/baza_dannyx_CORS.php
+                fetch('https://yss-bridge.nmbook.ru/PSTGU/1_kurs_2023/kadilnikov_dmitry/baza_dannix/baza_dannyx_CORS.php')
                   .then(function (response) {
                     return response.text();
                   })
                   .then(function (text) {
                     console.log(text);
-                    load_home();
+                    document.getElementById("myMessage").innerHTML=text;
+                    //document.getElementById("myMessage").innerHTML='<object type="text/html" data="home_page.html" width="100%" title="This object has text"></object>';
                   });
                     
                 var toWebBrowser = "";

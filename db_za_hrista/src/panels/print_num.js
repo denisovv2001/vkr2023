@@ -17,5 +17,5 @@ export function print_num() {
   console.log(toDisplay); // печать в консоли браузера
   console.log(toWebBrowser);
   alert(toDisplay); // вывод на экран окна с сообщением
-  return toWebBrowser;
+  //return toWebBrowser;
 }

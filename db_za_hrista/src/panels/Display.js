@@ -1,7 +1,6 @@
 import React from 'react';
 import {print_num} from './print_num.js';
 import { dataField } from './print_DB_data.js';
-import { load_home } from './print_DB_data.js';
 
 
 class NumberDisplay extends React.Component {
