@@ -13,5 +13,4 @@ export function dataField() {
       document.getElementById("myMessage").innerHTML=text;
       return text;
     });
-  //document.getElementById("myMessage").innerHTML = toWebBrowser; 
 } 
